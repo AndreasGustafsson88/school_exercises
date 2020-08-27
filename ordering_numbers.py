@@ -1,5 +1,5 @@
 def main():
-    X, Y, Z = 15, 10, 12
+    X, Y, Z = 33, 101, 3
 # X Smallest
     if Z > X < Y < Z:
         x, y, z = X, Y, Z
