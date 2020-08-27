@@ -1,8 +1,8 @@
 def main():
-    even_number = "2468"
-    for number in range(1000, 3001):
-        num1 = str(number)
-        num2 = list(num1)
+    even_number = ["2", "4", "6", "8"]
+    for number in range(2221, 3001):
+        number = str(number)
+        num2 = list(number)
 
         if num2[0] in even_number and num2[1] in even_number and num2[2] in even_number and num2[3] in even_number:
             print(number, end=",")
