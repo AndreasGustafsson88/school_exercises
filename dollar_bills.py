@@ -14,7 +14,7 @@ def main():
     if note in names_stored:
         print(names_stored[note])
     else:
-        print("hörru du! den finns inte!")
+        print("hörru du! den finns inte vad jag kan se!")
 
 
 if __name__ == "__main__":
