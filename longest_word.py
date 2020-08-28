@@ -3,7 +3,7 @@ def longest_word(input1):
     for i in input1:
         if len(i) > len(longest):
             longest = i
-    return longest
+    return len(longest)
 
 
 def main():
