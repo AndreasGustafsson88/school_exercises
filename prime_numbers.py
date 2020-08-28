@@ -8,7 +8,7 @@ def prime(input):
 
 
 def main():
-    for x in range (100):
+    for x in range(100):
         print(x)
 
 
