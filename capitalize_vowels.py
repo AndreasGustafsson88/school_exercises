@@ -1,5 +1,4 @@
-def main():
-    string_input = "Jag heter Andreas"
+def jh(string_input):
     vowels = ["a", "e", "i", "o", "u", "y"]
     new_output = ""
 
@@ -11,6 +10,9 @@ def main():
 
     print(new_output)
 
+
+def main():
+    jh("Hej jag heter Andreas")
 
 if __name__ == "__main__":
     main()

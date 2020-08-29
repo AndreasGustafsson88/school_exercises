@@ -12,7 +12,7 @@ def translate(input_string):
 
 
 def main():
-    my_string = "Hej jag heter Andreas, kan du förstå mig?"
+    my_string = "nu ska jag krama dig"
     print(translate(my_string))
 
 
