@@ -5,6 +5,8 @@ def is_it_sorted(user_list):
     else:
         if answer_list == user_list:
             return True
+        elif user_list == sorted(user_list, reverse=True):
+            return True
         else:
             return False
 
