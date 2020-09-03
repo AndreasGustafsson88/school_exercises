@@ -5,7 +5,7 @@ words = ["ulricehamn", "frisbee", "långben", "rönnbärsmal", "skidbacken"]
 life_count = 8
 
 
-def draw_hangman(hangman_turtle, life_count):
+def draw_hangman(hangman_turtle):
     if life_count == 7:
         hangman_turtle.pensize(10)
         hangman_turtle.penup()
@@ -98,7 +98,7 @@ def main():
 
         if lose_life:
             life_count -= 1
-            draw_hangman(hangman_turtle, life_count)
+            draw_hangman(hangman_turtle)
 
         hidden_word = new_hidden
         lifes_turtle.clear()
