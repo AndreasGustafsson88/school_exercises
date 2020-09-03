@@ -1,12 +1,54 @@
 import random
 from turtle import *
 
-
 words = ["ulricehamn", "frisbee", "långben", "rönnbärsmal", "skidbacken"]
 life_count = 8
 
 
+def draw_hangman(hangman_turtle, life_count):
+    if life_count == 7:
+        hangman_turtle.pensize(10)
+        hangman_turtle.penup()
+        hangman_turtle.goto(50, -250)
+        hangman_turtle.pendown()
+        hangman_turtle.left(90)
+        hangman_turtle.forward(500)
+    elif life_count == 6:
+        hangman_turtle.right(90)
+        hangman_turtle.forward(300)
+    elif life_count == 5:
+        hangman_turtle.right(90)
+        hangman_turtle.forward(50)
+        hangman_turtle.right(90)
+        hangman_turtle.circle(50)
+    elif life_count == 4:
+        hangman_turtle.left(90)
+        hangman_turtle.penup()
+        hangman_turtle.goto(350, 100)
+        hangman_turtle.pendown()
+        hangman_turtle.forward(200)
+    elif life_count == 3:
+        hangman_turtle.right(45)
+        hangman_turtle.forward(75)
+    elif life_count == 2:
+        hangman_turtle.goto(350, -100)
+        hangman_turtle.left(90)
+        hangman_turtle.forward(75)
+    elif life_count == 1:
+        hangman_turtle.penup()
+        hangman_turtle.goto(350, 20)
+        hangman_turtle.pendown()
+        hangman_turtle.right(180)
+        hangman_turtle.forward(75)
+    elif life_count == 0:
+        hangman_turtle.goto(350, 20)
+        hangman_turtle.right(90)
+        hangman_turtle.forward(75)
+
+
 def main():
+    hangman_turtle = Turtle()
+    hangman_turtle.hideturtle()
     writer_turtle = Turtle()
     writer_turtle.hideturtle()
     writer_turtle.penup()
@@ -52,50 +94,11 @@ def main():
                 new_hidden += letter + " "
                 lose_life = False
             else:
-                new_hidden = new_hidden + hidden_word[i*2] + " "
+                new_hidden = new_hidden + hidden_word[i * 2] + " "
 
         if lose_life:
             life_count -= 1
-            if life_count == 7:
-                hangman_turtle = Turtle()
-                hangman_turtle.hideturtle()
-                hangman_turtle.pensize(10)
-                hangman_turtle.penup()
-                hangman_turtle.goto(50, -250)
-                hangman_turtle.pendown()
-                hangman_turtle.left(90)
-                hangman_turtle.forward(500)
-            elif life_count == 6:
-                hangman_turtle.right(90)
-                hangman_turtle.forward(300)
-            elif life_count == 5:
-                hangman_turtle.right(90)
-                hangman_turtle.forward(50)
-                hangman_turtle.right(90)
-                hangman_turtle.circle(50)
-            elif life_count == 4:
-                hangman_turtle.left(90)
-                hangman_turtle.penup()
-                hangman_turtle.goto(350, 100)
-                hangman_turtle.pendown()
-                hangman_turtle.forward(200)
-            elif life_count == 3:
-                hangman_turtle.right(45)
-                hangman_turtle.forward(75)
-            elif life_count == 2:
-                hangman_turtle.goto(350, -100)
-                hangman_turtle.left(90)
-                hangman_turtle.forward(75)
-            elif life_count == 1:
-                hangman_turtle.penup()
-                hangman_turtle.goto(350, 20)
-                hangman_turtle.pendown()
-                hangman_turtle.right(180)
-                hangman_turtle.forward(75)
-            elif life_count == 0:
-                hangman_turtle.goto(350, 20)
-                hangman_turtle.right(90)
-                hangman_turtle.forward(75)
+            draw_hangman(hangman_turtle, life_count)
 
         hidden_word = new_hidden
         lifes_turtle.clear()
