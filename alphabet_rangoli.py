@@ -1,8 +1,9 @@
 import string
 alpha = string.ascii_lowercase
-n = 25
+n = 22
 new_result1 = ""
-longest = n + n - 1 + ((n + n - 1) - 1)
+width = n + n - 1 + ((n + n - 1) - 1)
+
 for i in range(1, n + 1):
     result = ""
     new_result1 = ""
@@ -19,8 +20,8 @@ for i in range(1, n + 1):
             index -= 1
     for letter in range(len(result)-1):
         new_result1 += result[letter]
-    print(new_result1.center(longest, "-"))
-    #print(result.center(n*3+3, "-"))
+
+    print(new_result1.center(width, "-"))
 
 for i in range(n - 1, 0, -1):
     result = ""
@@ -39,13 +40,4 @@ for i in range(n - 1, 0, -1):
     for letter in range(len(result) - 1):
         new_result2 += result[letter]
 
-
-    print(new_result2.center(longest, "-"))
-
-
-
-'''    
-  2
- 212
-21012
-'''
+    print(new_result2.center(width, "-"))
